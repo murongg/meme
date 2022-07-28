@@ -8,13 +8,14 @@ export const LEFT_TOOLS = [{
   icon: 'i-bxs-pointer',
   event: () => {
 
-  }
+  },
 }, {
   type: 'pencil',
   icon: 'i-bxs-pencil',
   event: () => {
-
-  }
+    const canvasRaw = toRaw(canvas.value)
+    canvasRaw!.isDrawingMode = !canvasRaw!.isDrawingMode
+  },
 }, {
   type: 'text',
   icon: 'i-material-symbols-text-fields-rounded',
@@ -23,5 +24,5 @@ export const LEFT_TOOLS = [{
     const text = new fabric.IText('  ')
     canvasRaw?.add(text)
     canvasRaw?.setActiveObject(text)
-  }
+  },
 }]

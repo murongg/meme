@@ -1,5 +1,5 @@
-import { defineStore } from "pinia";
-import { Ref, StyleValue } from "vue";
+import { defineStore } from 'pinia'
+import type { StyleValue } from 'vue'
 
 export interface RightMenuState {
   menuRef: HTMLElement | null
@@ -17,7 +17,7 @@ export const useRightMenu = defineStore('right-menu', {
   state: () => ({
     menuRef: null,
     visable: false,
-    position: {}
+    position: {},
   }),
   actions: {
     showMenu() {
@@ -25,7 +25,7 @@ export const useRightMenu = defineStore('right-menu', {
     },
     hideMenu() {
       this.visable = false
-    }
-  }
+    },
+  },
 })
 

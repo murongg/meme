@@ -1,39 +1,37 @@
-import { fabric } from "fabric"
-import { IEvent } from "fabric/fabric-impl";
-import { Ref } from "vue";
-import { useRightMenu } from "~/store/rightMenu";
+import { fabric } from 'fabric'
+import type { IEvent } from 'fabric/fabric-impl'
+import type { Ref } from 'vue'
+import { useRightMenu } from '~/store/rightMenu'
 
-let canvas: Ref<fabric.Canvas | null> = ref(null)
+const canvas: Ref<fabric.Canvas | null> = ref(null)
 
 function initElements() {
-  let rect = new fabric.Rect({
+  const rect = new fabric.Rect({
     top: 30,
     left: 30,
     fill: 'orange',
     width: 100,
-    height: 100
+    height: 100,
   })
 
-  let circle = new fabric.Circle({
+  const circle = new fabric.Circle({
     top: 50,
     left: 60,
     fill: 'hotpink',
-    radius: 50
+    radius: 50,
   })
 
-  let triangle = new fabric.Triangle({
+  const triangle = new fabric.Triangle({
     top: 80,
     left: 30,
     width: 80,
     height: 100,
-    fill: 'blue'
+    fill: 'blue',
   })
 
   const canvasRaw = toRaw(canvas.value)
   canvasRaw?.add(rect, circle, triangle)
-
 }
-
 
 function initEvents() {
   const rightMenu = useRightMenu()
@@ -48,20 +46,19 @@ function initEvents() {
         let pointX = opt.pointer?.x || 0
         let pointY = opt.pointer?.y || 0
 
-        if (canvas.value.width! - pointX <= menuWidth) {
+        if (canvas.value.width! - pointX <= menuWidth)
           pointX -= menuWidth
-        }
-        if (canvas.value.height! - pointY <= menuHeight) {
+
+        if (canvas.value.height! - pointY <= menuHeight)
           pointY -= menuHeight
-        }
 
         rightMenu.position = {
           left: `${pointX}px`,
-          top: `${pointY}px`
+          top: `${pointY}px`,
         }
       }
-
-    } else {
+    }
+    else {
       rightMenu.hideMenu()
     }
   }
@@ -69,12 +66,10 @@ function initEvents() {
   canvas.value?.on('mouse:down', canvasOnMouseDown)
 
   document.onkeydown = function (e) {
-    if (e.key === 'Backspace') {
+    if (e.key === 'Backspace')
       canvas.value?.remove(canvas.value.getActiveObject())
-    }
   }
 }
-
 
 export const useBoard = () => {
   function init(canvasElement: HTMLCanvasElement) {
@@ -84,8 +79,8 @@ export const useBoard = () => {
       backgroundColor: '#f5f5f5',
       fireRightClick: true, // 启用右键，button的数字为3
       stopContextMenu: true, // 禁止默认右键菜单
-      preserveObjectStacking: true
-    });
+      preserveObjectStacking: true,
+    })
 
     useResizeObserver(document.body, useThrottleFn((entries) => {
       const entry = entries[0]
@@ -100,6 +95,6 @@ export const useBoard = () => {
 
   return {
     canvas,
-    init
+    init,
   }
 }

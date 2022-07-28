@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useBoard } from '~/context/board';
+import { useBoard } from '~/context/board'
 import { useRightMenu } from '~/store/rightMenu'
 const rightMenu = useRightMenu()
 const menu = ref(null)
@@ -35,17 +35,28 @@ function remove() {
   canvas.value?.remove(canvas.value.getActiveObject())
   exiting()
 }
-
 </script>
 
 <template>
-  <div id="menu" class="menu-x" v-show="rightMenu.visable" :style="rightMenu.position" @contextmenu.prevent=""
-    ref="menu">
-    <div @click="upper">上移一层</div>
-    <div @click="lower">下移一层</div>
-    <div @click="top">置于顶层</div>
-    <div @click="bottom">置于底层</div>
-    <div @click="remove">删除</div>
+  <div
+    v-show="rightMenu.visable" id="menu" ref="menu" class="menu-x" :style="rightMenu.position"
+    @contextmenu.prevent=""
+  >
+    <div @click="upper">
+      上移一层
+    </div>
+    <div @click="lower">
+      下移一层
+    </div>
+    <div @click="top">
+      置于顶层
+    </div>
+    <div @click="bottom">
+      置于底层
+    </div>
+    <div @click="remove">
+      删除
+    </div>
   </div>
 </template>
 
