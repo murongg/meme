@@ -38,4 +38,10 @@ export const LEFT_TOOLS = [{
   event: () => {
     redo.value()
   },
+}, {
+  type: 'clear',
+  icon: 'i-carbon-clean',
+  event: () => {
+    canvas.value?.clear()
+  }
 }]
