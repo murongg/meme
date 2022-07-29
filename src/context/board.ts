@@ -42,6 +42,6 @@ export const useBoard = () => {
     init,
     isCreateText,
     undo,
-    redo
+    redo,
   }
 }

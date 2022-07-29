@@ -31,11 +31,11 @@ export const LEFT_TOOLS = [{
   icon: 'i-bx-undo',
   event: () => {
     undo.value()
-  }
+  },
 }, {
   type: 'redo',
   icon: 'i-bx-redo',
   event: () => {
     redo.value()
-  }
+  },
 }]

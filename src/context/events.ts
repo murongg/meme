@@ -1,7 +1,7 @@
 import { fabric } from 'fabric'
-import { IEvent } from "fabric/fabric-impl"
-import { Ref } from 'vue'
-import { useRightMenu } from "~/store/rightMenu"
+import type { IEvent } from 'fabric/fabric-impl'
+import type { Ref } from 'vue'
+import { useRightMenu } from '~/store/rightMenu'
 
 export function initEvents(canvas: fabric.Canvas, options: {
   isCreateText: Ref<boolean>
@@ -28,12 +28,13 @@ export function initEvents(canvas: fabric.Canvas, options: {
           top: `${pointY}px`,
         }
       }
-    } else if (opt.button === 1) {
+    }
+    else if (opt.button === 1) {
       if (options.isCreateText.value) {
         const text = new fabric.IText('', {
           left: pointX,
           top: pointY,
-          padding: 7
+          padding: 7,
         })
         canvas?.add(text)
         canvas?.setActiveObject(text)

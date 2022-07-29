@@ -1,5 +1,4 @@
-import { UnwrapNestedRefs } from "vue"
-
+import type { UnwrapNestedRefs } from 'vue'
 
 const history: UnwrapNestedRefs<string[]> = reactive([])
 const futures: UnwrapNestedRefs<string[]> = reactive([])
@@ -16,22 +15,22 @@ export function initEdits(canvas: fabric.Canvas) {
     updateCanvasState()
     canvas.on('object:modified', () => {
       updateCanvasState()
-    });
+    })
     canvas.on('object:added', () => {
       updateCanvasState()
-    });
+    })
     canvas.on('object:removed', () => {
       updateCanvasState()
-    });
+    })
     canvas.on('object:rotating', () => {
       updateCanvasState()
-    });
+    })
   }
 
   function redo() {
-    if (futures.length === 0) {
+    if (futures.length === 0)
       return
-    }
+
     handler = true
     canvas.loadFromJSON(futures.at(-1), () => {
       const last = futures.pop()
@@ -41,9 +40,9 @@ export function initEdits(canvas: fabric.Canvas) {
   }
 
   function undo() {
-    if (history.length === 1) {
+    if (history.length === 1)
       return
-    }
+
     handler = true
     const last = history.pop()
     canvas.loadFromJSON(history.at(-1), () => {
@@ -51,7 +50,6 @@ export function initEdits(canvas: fabric.Canvas) {
       handler = false
     })
   }
-
 
   return {
     init,
