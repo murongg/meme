@@ -1,75 +1,10 @@
 import { fabric } from 'fabric'
-import type { IEvent } from 'fabric/fabric-impl'
 import type { Ref } from 'vue'
-import { useRightMenu } from '~/store/rightMenu'
+import { initElements } from './elements'
+import { initEvents } from './events'
 
 const canvas: Ref<fabric.Canvas | null> = ref(null)
-
-function initElements() {
-  const rect = new fabric.Rect({
-    top: 30,
-    left: 30,
-    fill: 'orange',
-    width: 100,
-    height: 100,
-  })
-
-  const circle = new fabric.Circle({
-    top: 50,
-    left: 60,
-    fill: 'hotpink',
-    radius: 50,
-  })
-
-  const triangle = new fabric.Triangle({
-    top: 80,
-    left: 30,
-    width: 80,
-    height: 100,
-    fill: 'blue',
-  })
-
-  const canvasRaw = toRaw(canvas.value)
-  canvasRaw?.add(rect, circle, triangle)
-}
-
-function initEvents() {
-  const rightMenu = useRightMenu()
-  async function canvasOnMouseDown(opt: IEvent<MouseEvent>) {
-    if (opt.button === 3 && opt.target) {
-      rightMenu.showMenu()
-      await nextTick()
-      if (rightMenu.menuRef && canvas.value) {
-        const menuWidth = (rightMenu.menuRef as unknown as HTMLElement).offsetWidth
-        const menuHeight = (rightMenu.menuRef as unknown as HTMLElement).offsetHeight
-        // 当前鼠标位置
-        let pointX = opt.pointer?.x || 0
-        let pointY = opt.pointer?.y || 0
-
-        if (canvas.value.width! - pointX <= menuWidth)
-          pointX -= menuWidth
-
-        if (canvas.value.height! - pointY <= menuHeight)
-          pointY -= menuHeight
-
-        rightMenu.position = {
-          left: `${pointX}px`,
-          top: `${pointY}px`,
-        }
-      }
-    }
-    else {
-      rightMenu.hideMenu()
-    }
-  }
-
-  canvas.value?.on('mouse:down', canvasOnMouseDown)
-
-  document.onkeydown = function (e) {
-    if (e.key === 'Backspace')
-      canvas.value?.remove(canvas.value.getActiveObject())
-  }
-}
+const isCreateText: Ref<boolean> = ref(false)
 
 export const useBoard = () => {
   function init(canvasElement: HTMLCanvasElement) {
@@ -89,12 +24,14 @@ export const useBoard = () => {
       canvas.value!.height = height
     }, 200))
 
-    initElements()
-    initEvents()
+    initElements(toRaw(canvas.value))
+    initEvents(toRaw(canvas.value), { isCreateText })
+    // zoomToFitCanvas(canvas)
   }
 
   return {
     canvas,
     init,
+    isCreateText
   }
 }

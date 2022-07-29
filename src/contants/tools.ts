@@ -1,13 +1,15 @@
-import { fabric } from 'fabric'
 import { useBoard } from '~/context/board'
 
-const { canvas } = useBoard()
+const { canvas, isCreateText } = useBoard()
 
 export const LEFT_TOOLS = [{
   type: 'pointer',
   icon: 'i-bxs-pointer',
   event: () => {
-
+    const canvasRaw = toRaw(canvas.value)
+    canvasRaw!.isDrawingMode = false
+    isCreateText.value = false
+    canvasRaw!.defaultCursor = ''
   },
 }, {
   type: 'pencil',
@@ -21,8 +23,15 @@ export const LEFT_TOOLS = [{
   icon: 'i-material-symbols-text-fields-rounded',
   event: () => {
     const canvasRaw = toRaw(canvas.value)
-    const text = new fabric.IText('  ')
-    canvasRaw?.add(text)
-    canvasRaw?.setActiveObject(text)
+    isCreateText.value = true
+    canvasRaw!.defaultCursor = 'text'
   },
+}, {
+  type: 'undo',
+  icon: 'i-bx-undo',
+  event: () => { }
+}, {
+  type: 'redo',
+  icon: 'i-bx-redo',
+  event: () => { }
 }]
