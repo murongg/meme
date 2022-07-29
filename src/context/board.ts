@@ -1,10 +1,13 @@
 import { fabric } from 'fabric'
 import type { Ref } from 'vue'
+import { initEdits } from './edits'
 import { initElements } from './elements'
 import { initEvents } from './events'
 
 const canvas: Ref<fabric.Canvas | null> = ref(null)
 const isCreateText: Ref<boolean> = ref(false)
+const redo = ref(() => { })
+const undo = ref(() => { })
 
 export const useBoard = () => {
   function init(canvasElement: HTMLCanvasElement) {
@@ -24,14 +27,21 @@ export const useBoard = () => {
       canvas.value!.height = height
     }, 200))
 
-    initElements(toRaw(canvas.value))
-    initEvents(toRaw(canvas.value), { isCreateText })
+    const canvasRaw = toRaw(canvas.value)
+    initElements(canvasRaw)
+    initEvents(canvasRaw, { isCreateText })
+    const { init: initEditsEvent, undo: editUndo, redo: editRedo } = initEdits(canvasRaw)
+    initEditsEvent()
+    undo.value = editUndo
+    redo.value = editRedo
     // zoomToFitCanvas(canvas)
   }
 
   return {
     canvas,
     init,
-    isCreateText
+    isCreateText,
+    undo,
+    redo
   }
 }

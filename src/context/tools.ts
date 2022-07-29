@@ -1,6 +1,6 @@
 import { useBoard } from '~/context/board'
 
-const { canvas, isCreateText } = useBoard()
+const { canvas, isCreateText, undo, redo } = useBoard()
 
 export const LEFT_TOOLS = [{
   type: 'pointer',
@@ -29,9 +29,13 @@ export const LEFT_TOOLS = [{
 }, {
   type: 'undo',
   icon: 'i-bx-undo',
-  event: () => { }
+  event: () => {
+    undo.value()
+  }
 }, {
   type: 'redo',
   icon: 'i-bx-redo',
-  event: () => { }
+  event: () => {
+    redo.value()
+  }
 }]
