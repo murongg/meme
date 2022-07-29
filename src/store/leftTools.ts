@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { LEFT_TOOLS } from '~/contants/tools'
+import { LEFT_TOOLS } from '~/context/tools'
 
 export const useLeftTools = defineStore('left-tools', {
   state: () => ({
