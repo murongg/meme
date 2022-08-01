@@ -57,7 +57,8 @@ export function initEvents(canvas: fabric.Canvas, options: {
     if (currentActiveObject) {
       topMenu.visable = true
       await nextTick()
-      const { top, lineCoords } = currentActiveObject
+      const { top } = currentActiveObject
+      const lineCoords = (currentActiveObject as any).lineCoords
       // top left x
       const tlx = lineCoords.tl.x
       // top right x
