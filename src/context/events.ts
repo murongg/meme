@@ -52,7 +52,7 @@ export function initEvents(canvas: fabric.Canvas, options: {
     }
   }
 
-  async function canvasOnMouseUp(opt: IEvent<MouseEvent>) {
+  async function canvasOnMouseUp(_opt: IEvent<MouseEvent>) {
     const currentActiveObject = canvas.getActiveObject()
     if (currentActiveObject) {
       topMenu.visable = true
@@ -68,10 +68,12 @@ export function initEvents(canvas: fabric.Canvas, options: {
       const left = (tlx + width! / 2) - (menuRef.clientWidth / 2)
       topMenu.position = {
         left: `${left}px`,
-        top: `${top! - menuRef.clientHeight - TOP_MENU_THRESHOLD}px`
+        top: `${top! - menuRef.clientHeight - TOP_MENU_THRESHOLD}px`,
       }
-    } else {
-      topMenu.visable = false
+    }
+    else {
+      if (!canvas.isDrawingMode)
+        topMenu.visable = false
     }
   }
 

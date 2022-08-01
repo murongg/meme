@@ -1,15 +1,12 @@
 import { useBoard } from '~/context/board'
 import { useTopMenu } from '~/store/topMenu'
 
-
 const { canvas, isCreateText, undo, redo } = useBoard()
-
 
 function commonHandler() {
   const topMenu = useTopMenu()
   topMenu.visable = false
 }
-
 
 export const LEFT_TOOLS = [{
   type: 'pointer',
@@ -58,7 +55,7 @@ export const LEFT_TOOLS = [{
   event: () => {
     canvas.value?.clear()
     commonHandler()
-  }
+  },
 }]
 
 export const TOP_MENU = [{

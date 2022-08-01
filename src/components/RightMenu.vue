@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useBoard } from '~/context/board'
 import { useRightMenu } from '~/store/rightMenu'
-import { useTopMenu } from '~/store/topMenu';
+import { useTopMenu } from '~/store/topMenu'
 const rightMenu = useRightMenu()
 const topMenu = useTopMenu()
 const menu = ref(null)
@@ -42,8 +42,10 @@ function remove() {
 </script>
 
 <template>
-  <div v-show="rightMenu.visable" id="menu" ref="menu" w="150px" absolute overflow="hidden" text="sm"
-    class="menu-x card-container" :style="rightMenu.position" @contextmenu.prevent="">
+  <div
+    v-show="rightMenu.visable" id="menu" ref="menu" w="150px" absolute overflow="hidden" text="sm"
+    class="menu-x card-container" :style="rightMenu.position" @contextmenu.prevent=""
+  >
     <div @click="upper">
       上移一层
     </div>
