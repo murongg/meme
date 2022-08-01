@@ -1,5 +1,21 @@
+<script setup lang="ts">
+import { useRightPanel } from './store/rightPanel';
+const rightPanel = useRightPanel()
+
+const el = ref<HTMLElement | null>(null)
+
+function onDrop(e: DragEvent) {
+  console.log(e.x, e.y, e)
+  const { x, y } = e
+  rightPanel.x = x
+  rightPanel.y = y
+}
+
+
+</script>
+
 <template>
-  <main font-sans text="center gray-700 dark:gray-200">
+  <main font-sans text="center gray-700 dark:gray-200" ref="el" @drop="onDrop">
     <div relative>
       <LeftToolsBar />
       <TopMenu />

@@ -1,11 +1,17 @@
 <script setup lang="ts">
+import { fabric } from 'fabric'
 import { CATEGORYS } from '~/constants/data'
+import { useBoard } from '~/context/board';
+import { useRightPanel } from '~/store/rightPanel';
 
 const currentIndex = ref(0)
 const currentCategoryIndex = ref(0)
 const categories = ref<any[]>([])
 const materials = ref<any[]>([])
 const isFinished = ref(false)
+
+const { canvas } = useBoard()
+const rightPanel = useRightPanel()
 
 function itemClick(index: number) {
   currentIndex.value = index
@@ -43,6 +49,19 @@ const { list: categoryList, containerProps: categoryContainerProps, wrapperProps
     itemHeight: 23,
   },
 )
+
+function onDrag(event: DragEvent, data: any) {
+  let imgElement = document.createElement('img')
+  imgElement.src = data.path
+  imgElement.onload = () => {
+    const image = new fabric.Image(imgElement, {
+      left: rightPanel.x,
+      top: rightPanel.y,
+    })
+    toRaw(canvas.value)?.add(image)
+  }
+}
+
 </script>
 
 <template>
@@ -68,7 +87,7 @@ const { list: categoryList, containerProps: categoryContainerProps, wrapperProps
         <ul overflow-y="scroll" h="760px" text="left">
           <li v-for="data in materials" :key="data.path" inline-block w="50%" px="2%" py="%2" mb="10px" box-border
             v="middle">
-            <img v-lazy="data.path">
+            <img v-lazy="data.path" draggable @dragend="onDrag($event, data)">
           </li>
         </ul>
       </div>
