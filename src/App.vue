@@ -5,6 +5,7 @@
       <TopMenu />
       <Board />
       <RightMenu />
+      <RightPanel />
     </div>
   </main>
 </template>

@@ -1,0 +1,108 @@
+{
+  "categories": [
+    {
+      "cate2": "头盔"
+    },
+    {
+      "cate2": "突击步枪"
+    },
+    {
+      "cate2": "冲锋枪"
+    },
+    {
+      "cate2": "手雷"
+    },
+    {
+      "cate2": "近战武器"
+    },
+    {
+      "cate2": "T恤"
+    },
+    {
+      "cate2": "卡宾枪"
+    },
+    {
+      "cate2": "夹克"
+    },
+    {
+      "cate2": "子弹"
+    },
+    {
+      "cate2": "帽子"
+    },
+    {
+      "cate2": "手套"
+    },
+    {
+      "cate2": "手枪"
+    },
+    {
+      "cate2": "散弹枪"
+    },
+    {
+      "cate2": "消耗品"
+    },
+    {
+      "cate2": "狙击步枪"
+    },
+    {
+      "cate2": "眼镜"
+    },
+    {
+      "cate2": "精确步枪"
+    },
+    {
+      "cate2": "背包"
+    },
+    {
+      "cate2": "背心"
+    },
+    {
+      "cate2": "腰带"
+    },
+    {
+      "cate2": "裤子"
+    },
+    {
+      "cate2": "轻机枪"
+    },
+    {
+      "cate2": "配件弹夹"
+    },
+    {
+      "cate2": "配件弹药"
+    },
+    {
+      "cate2": "配件枪口"
+    },
+    {
+      "cate2": "配件镜头"
+    },
+    {
+      "cate2": "钥匙"
+    },
+    {
+      "cate2": "面具"
+    },
+    {
+      "cate2": "鞋子"
+    }
+  ],
+  "materials": [
+    {
+      "width": 90,
+      "height": 131,
+      "path": "http://www.wakatool.com/material/v12/吃鸡/背心/a1.png"
+    },
+    {
+      "width": 90,
+      "height": 128,
+      "path": "http://www.wakatool.com/material/v12/吃鸡/背心/a2.png"
+    },
+    {
+      "width": 90,
+      "height": 126,
+      "path": "http://www.wakatool.com/material/v12/吃鸡/背心/a3.png"
+    }
+  ]
+}

@@ -54,7 +54,8 @@ export function initEvents(canvas: fabric.Canvas, options: {
 
   async function canvasOnMouseUp(_opt: IEvent<MouseEvent>) {
     const currentActiveObject = canvas.getActiveObject()
-    if (currentActiveObject) {
+    const currentActiveObjects = canvas.getActiveObjects()
+    if (currentActiveObject && currentActiveObjects.length === 1) {
       topMenu.visable = true
       await nextTick()
       const { top } = currentActiveObject
@@ -82,7 +83,7 @@ export function initEvents(canvas: fabric.Canvas, options: {
 
   document.onkeydown = function (e) {
     if (e.key === 'Backspace') {
-      canvas?.remove(canvas.getActiveObject())
+      canvas.getActiveObjects().forEach((obj) => { canvas.remove(obj) })
       topMenu.visable = false
     }
   }
