@@ -7,9 +7,12 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Board: typeof import('./src/components/Board.vue')['default']
     LeftToolsBar: typeof import('./src/components/LeftToolsBar.vue')['default']
+    'LeftToolsBar copy': typeof import('./src/components/LeftToolsBar copy.vue')['default']
     RightMenu: typeof import('./src/components/RightMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TopMenu: typeof import('./src/components/TopMenu.vue')['default']
+    TopToolsBar: typeof import('./src/components/TopToolsBar.vue')['default']
   }
 }
 

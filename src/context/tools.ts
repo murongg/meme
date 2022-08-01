@@ -1,4 +1,6 @@
 import { useBoard } from '~/context/board'
+import { useTopMenu } from '~/store/topMenu'
+
 
 const { canvas, isCreateText, undo, redo } = useBoard()
 
@@ -44,4 +46,27 @@ export const LEFT_TOOLS = [{
   event: () => {
     canvas.value?.clear()
   }
+}]
+
+export const TOP_MENU = [{
+  type: 'up',
+  icon: 'i-material-symbols-arrow-upward',
+  event: () => {
+    canvas.value?.bringForward(canvas.value.getActiveObject())
+  },
+}, {
+  type: 'down',
+  icon: 'i-material-symbols-arrow-downward',
+  event: () => {
+    canvas.value?.sendBackwards(canvas.value.getActiveObject())
+  },
+}, {
+  type: 'delete',
+  icon: 'i-material-symbols-delete-outline',
+  event: () => {
+    const topMenu = useTopMenu()
+    const canvasRaw = toRaw(canvas.value)
+    canvasRaw?.remove(canvasRaw.getActiveObject())
+    topMenu.visable = false
+  },
 }]

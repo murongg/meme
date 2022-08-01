@@ -14,6 +14,7 @@ function exiting() {
 
 function upper() {
   canvas.value?.bringForward(canvas.value.getActiveObject())
+  exiting()
 }
 
 function lower() {
@@ -38,10 +39,8 @@ function remove() {
 </script>
 
 <template>
-  <div
-    v-show="rightMenu.visable" id="menu" ref="menu" class="menu-x" :style="rightMenu.position"
-    @contextmenu.prevent=""
-  >
+  <div v-show="rightMenu.visable" id="menu" ref="menu" text="sm" class="menu-x card-container" :style="rightMenu.position"
+    @contextmenu.prevent="">
     <div @click="upper">
       上移一层
     </div>
@@ -62,11 +61,9 @@ function remove() {
 
 <style lang="scss" scoped>
 .menu-x {
-  width: 200px;
+  width: 150px;
   position: absolute;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 
   div {
     box-sizing: border-box;
@@ -78,15 +75,8 @@ function remove() {
       background-color: antiquewhite;
     }
 
-    &:first-child {
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-    }
-
     &:last-child {
       border-bottom: none;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
     }
   }
 }
