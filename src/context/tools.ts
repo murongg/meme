@@ -4,6 +4,13 @@ import { useTopMenu } from '~/store/topMenu'
 
 const { canvas, isCreateText, undo, redo } = useBoard()
 
+
+function commonHandler() {
+  const topMenu = useTopMenu()
+  topMenu.visable = false
+}
+
+
 export const LEFT_TOOLS = [{
   type: 'pointer',
   icon: 'i-bxs-pointer',
@@ -12,6 +19,7 @@ export const LEFT_TOOLS = [{
     canvasRaw!.isDrawingMode = false
     isCreateText.value = false
     canvasRaw!.defaultCursor = ''
+    commonHandler()
   },
 }, {
   type: 'pencil',
@@ -19,6 +27,7 @@ export const LEFT_TOOLS = [{
   event: () => {
     const canvasRaw = toRaw(canvas.value)
     canvasRaw!.isDrawingMode = !canvasRaw!.isDrawingMode
+    commonHandler()
   },
 }, {
   type: 'text',
@@ -27,24 +36,28 @@ export const LEFT_TOOLS = [{
     const canvasRaw = toRaw(canvas.value)
     isCreateText.value = true
     canvasRaw!.defaultCursor = 'text'
+    commonHandler()
   },
 }, {
   type: 'undo',
   icon: 'i-bx-undo',
   event: () => {
     undo.value()
+    commonHandler()
   },
 }, {
   type: 'redo',
   icon: 'i-bx-redo',
   event: () => {
     redo.value()
+    commonHandler()
   },
 }, {
   type: 'clear',
   icon: 'i-carbon-clean',
   event: () => {
     canvas.value?.clear()
+    commonHandler()
   }
 }]
 
@@ -64,9 +77,8 @@ export const TOP_MENU = [{
   type: 'delete',
   icon: 'i-material-symbols-delete-outline',
   event: () => {
-    const topMenu = useTopMenu()
     const canvasRaw = toRaw(canvas.value)
     canvasRaw?.remove(canvasRaw.getActiveObject())
-    topMenu.visable = false
+    commonHandler()
   },
 }]

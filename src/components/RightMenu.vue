@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useBoard } from '~/context/board'
 import { useRightMenu } from '~/store/rightMenu'
+import { useTopMenu } from '~/store/topMenu';
 const rightMenu = useRightMenu()
+const topMenu = useTopMenu()
 const menu = ref(null)
 onMounted(() => {
   rightMenu.menuRef = menu.value
@@ -10,6 +12,7 @@ const { canvas } = useBoard()
 
 function exiting() {
   rightMenu.hideMenu()
+  topMenu.visable = false
 }
 
 function upper() {
@@ -39,8 +42,8 @@ function remove() {
 </script>
 
 <template>
-  <div v-show="rightMenu.visable" id="menu" ref="menu" text="sm" class="menu-x card-container" :style="rightMenu.position"
-    @contextmenu.prevent="">
+  <div v-show="rightMenu.visable" id="menu" ref="menu" w="150px" absolute overflow="hidden" text="sm"
+    class="menu-x card-container" :style="rightMenu.position" @contextmenu.prevent="">
     <div @click="upper">
       上移一层
     </div>
@@ -61,10 +64,6 @@ function remove() {
 
 <style lang="scss" scoped>
 .menu-x {
-  width: 150px;
-  position: absolute;
-  overflow: hidden;
-
   div {
     box-sizing: border-box;
     padding: 4px 8px;
