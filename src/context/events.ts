@@ -9,6 +9,8 @@ export function initEvents(canvas: fabric.Canvas, options: {
   isCreateText: Ref<boolean>
 }) {
   const rightMenu = useRightMenu()
+  const topMenu = useTopMenu()
+
   async function canvasOnMouseDown(opt: IEvent<MouseEvent>) {
     let pointX = opt.pointer?.x || 0
     let pointY = opt.pointer?.y || 0
@@ -52,14 +54,19 @@ export function initEvents(canvas: fabric.Canvas, options: {
 
   async function canvasOnMouseUp(opt: IEvent<MouseEvent>) {
     const currentActiveObject = canvas.getActiveObject()
-    const topMenu = useTopMenu()
     if (currentActiveObject) {
       topMenu.visable = true
       await nextTick()
-      const { left, top, width } = currentActiveObject
+      const { top, lineCoords } = currentActiveObject
+      // top left x
+      const tlx = lineCoords.tl.x
+      // top right x
+      const trx = lineCoords.tr.x
+      const width = trx - tlx
       const menuRef = topMenu.menuRef as unknown as HTMLElement
+      const left = (tlx + width! / 2) - (menuRef.clientWidth / 2)
       topMenu.position = {
-        left: `${left! - (width! / 4) + 10}px`,
+        left: `${left}px`,
         top: `${top! - menuRef.clientHeight - TOP_MENU_THRESHOLD}px`
       }
     } else {
@@ -71,7 +78,9 @@ export function initEvents(canvas: fabric.Canvas, options: {
   canvas.on('mouse:up', canvasOnMouseUp)
 
   document.onkeydown = function (e) {
-    if (e.key === 'Backspace')
+    if (e.key === 'Backspace') {
       canvas?.remove(canvas.getActiveObject())
+      topMenu.visable = false
+    }
   }
 }
