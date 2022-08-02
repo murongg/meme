@@ -12,7 +12,7 @@ function onDrop(e: DragEvent) {
 </script>
 
 <template>
-  <main ref="el" font-sans text="center gray-700 dark:gray-200" @drop="onDrop">
+  <main ref="el" font-sans text="center gray-700" @drop="onDrop">
     <div relative>
       <LeftToolsBar />
       <TopMenu />
