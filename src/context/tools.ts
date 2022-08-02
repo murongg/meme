@@ -1,3 +1,4 @@
+import { hasPrivateElement } from './utils'
 import { useBoard } from '~/context/board'
 import { useTopMenu } from '~/store/topMenu'
 
@@ -53,7 +54,11 @@ export const LEFT_TOOLS = [{
   type: 'clear',
   icon: 'i-carbon-clean',
   event: () => {
-    canvas.value?.clear()
+    const canvasRaw = toRaw(canvas.value)
+    canvasRaw?.getObjects().forEach((obj) => {
+      if (!hasPrivateElement(obj))
+        canvasRaw.remove(obj)
+    })
     commonHandler()
   },
 }]

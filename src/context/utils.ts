@@ -1,5 +1,6 @@
 import type { Ref } from 'vue'
 import { fabric } from 'fabric'
+import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_DRAW_DRAG_ELEMENT_KEY, CANVAS_KEY } from '~/constants/elements'
 
 export function zoomToFitCanvas(canvas: Ref<fabric.Canvas | null>) {
   canvas.value?.setZoom(1)
@@ -36,4 +37,9 @@ export function zoomToFitCanvas(canvas: Ref<fabric.Canvas | null>) {
     // 开始缩放
     canvas.value?.zoomToPoint(zoomPoint, zoom * 0.8)
   }
+}
+
+export function hasPrivateElement(obj: any) {
+  const key = obj.get(CANVAS_KEY)
+  return key === CANVAS_DRAW_CONTAINER_KEY || key === CANVAS_DRAW_DRAG_ELEMENT_KEY
 }

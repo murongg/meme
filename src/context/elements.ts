@@ -1,29 +1,61 @@
 import { fabric } from 'fabric'
-
+import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_DRAW_DRAG_ELEMENT_KEY, CANVAS_KEY } from '~/constants/elements'
 export function initElements(canvas: fabric.Canvas) {
+  const body = document.body
+  const rightPanelWidth = 400
+  const bodyWidth = body.clientWidth - rightPanelWidth
+  const bodyHeight = body.clientHeight
+  const rectWidth = 400
+  const rectHeight = 400
+  const left = bodyWidth / 2 - rectWidth / 2
+  const top = bodyHeight / 2 - rectHeight / 2
   const rect = new fabric.Rect({
-    top: 30,
-    left: 30,
-    fill: 'orange',
-    width: 100,
-    height: 100,
+    top,
+    left,
+    fill: 'white',
+    width: rectWidth,
+    height: rectHeight,
+    hasControls: false,
+    selectable: false,
+    hoverCursor: 'default',
   })
 
-  const circle = new fabric.Circle({
-    top: 50,
-    left: 60,
-    fill: 'hotpink',
-    radius: 50,
-  })
-
+  let oldTriangleLeft = rect.left! + rectWidth + 19
+  let oldTriangleTop = rect.top! + rectHeight - 17
   const triangle = new fabric.Triangle({
-    top: 80,
-    left: 30,
-    width: 80,
-    height: 100,
-    fill: 'blue',
+    hasBorders: false,
+    hasControls: false,
+    selectable: true,
+    top: oldTriangleTop,
+    left: oldTriangleLeft,
+    width: 50,
+    height: 25,
+    fill: '#bbb',
+    angle: 135,
+    hoverCursor: 'nw-resize',
   })
+
+  triangle.on('moving', () => {
+    const width = rect.width! + triangle.left! - oldTriangleLeft
+    const height = rect.height! + triangle.top! - oldTriangleTop
+    const left = bodyWidth / 2 - width / 2
+    const top = bodyHeight / 2 - height / 2
+    rect.width = width
+    rect.height = height
+    rect.left = left
+    rect.top = top
+    const newTriangleLeft = left + width + 19
+    const newTriangleTop = rect.top! + height - 17
+    triangle.left = newTriangleLeft
+    triangle.top = newTriangleTop
+    oldTriangleLeft = newTriangleLeft
+    oldTriangleTop = newTriangleTop
+  });
+
+  (rect as any).set(CANVAS_KEY, CANVAS_DRAW_CONTAINER_KEY);
+  (triangle as any).set(CANVAS_KEY, CANVAS_DRAW_DRAG_ELEMENT_KEY)
 
   const canvasRaw = toRaw(canvas)
-  canvasRaw?.add(rect, circle, triangle)
+  canvasRaw?.add(rect)
+  canvasRaw.add(triangle)
 }

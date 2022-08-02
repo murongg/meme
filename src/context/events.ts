@@ -1,6 +1,7 @@
 import { fabric } from 'fabric'
 import type { IEvent } from 'fabric/fabric-impl'
 import type { Ref } from 'vue'
+import { hasPrivateElement } from './utils'
 import { TOP_MENU_THRESHOLD } from '~/constants/elements'
 import { useRightMenu } from '~/store/rightMenu'
 import { useTopMenu } from '~/store/topMenu'
@@ -55,7 +56,8 @@ export function initEvents(canvas: fabric.Canvas, options: {
   async function canvasOnMouseUp(_opt: IEvent<MouseEvent>) {
     const currentActiveObject = canvas.getActiveObject()
     const currentActiveObjects = canvas.getActiveObjects()
-    if (currentActiveObject && currentActiveObjects.length === 1) {
+
+    if (currentActiveObject && currentActiveObjects.length === 1 && !hasPrivateElement(currentActiveObject)) {
       topMenu.visable = true
       await nextTick()
       const { top } = currentActiveObject
