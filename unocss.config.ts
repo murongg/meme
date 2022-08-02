@@ -15,7 +15,7 @@ export default defineConfig({
     ['card-container', 'bg-[#f5f5f5] rounded-4 shadow-2xl border-1 border-color-light opacity-90 transition duration-200 ease-in-out hover:opacity-100'],
     ['card-icon', 'flex justify-center items-center bg-white rounded-2 shadow-2xl opacity-90 transition duration-200 ease-in-out hover:opacity-100'],
   ],
-  safelist: ['i-bxs-pointer', 'i-bxs-pencil', 'i-material-symbols-text-fields-rounded', 'i-bx-undo', 'i-bx-redo', 'i-carbon-clean', 'i-material-symbols-arrow-upward', 'i-material-symbols-arrow-downward', 'i-material-symbols-delete-outline'],
+  safelist: ['i-bxs-pointer', 'i-bxs-pencil', 'i-material-symbols-text-fields-rounded', 'i-bx-undo', 'i-bx-redo', 'i-carbon-clean', 'i-material-symbols-arrow-upward', 'i-material-symbols-arrow-downward', 'i-material-symbols-delete-outline', 'i-bxs-download'],
   presets: [
     presetUno(),
     presetAttributify(),

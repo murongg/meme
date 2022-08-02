@@ -51,8 +51,9 @@ const { list: categoryList, containerProps: categoryContainerProps, wrapperProps
 )
 
 function onDrag(event: DragEvent, data: any) {
-  const imgElement = document.createElement('img')
+  const imgElement = new Image()
   imgElement.src = data.path
+  // imgElement.setAttribute("crossOrigin", "anonymous")
   imgElement.onload = () => {
     const image = new fabric.Image(imgElement)
     const imageSize = 200

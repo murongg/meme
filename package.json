@@ -8,7 +8,9 @@
     "typecheck": "vue-tsc --noEmit",
     "preview": "vite preview",
     "test": "vitest",
-    "generate:data": "esno scripts/generateData.ts"
+    "generate": "npm run generate:data && npm run download:image",
+    "generate:data": "esno scripts/generateData.ts",
+    "download:image": "esno scripts/downloadImages.ts"
   },
   "dependencies": {
     "@vueuse/core": "^8.6.0",
