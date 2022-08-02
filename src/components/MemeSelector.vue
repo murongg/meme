@@ -83,7 +83,7 @@ function onDrag(event: DragEvent, data: any) {
       </li>
     </ul>
     <div flex>
-      <div v-bind="categoryContainerProps as any" important-w="30%">
+      <div v-bind="categoryContainerProps as any" important-w="22%">
         <ul v-bind="categoryWrapperProps" overflow-y="scroll" important-h="760px">
           <li
             v-for="(data, index) in categoryList" :key="data.data.path" h="40px" leading="40px" border-color="light"
@@ -94,7 +94,7 @@ function onDrag(event: DragEvent, data: any) {
           </li>
         </ul>
       </div>
-      <div v-if="isFinished" important-w="70%" overflow-y="auto">
+      <div v-if="isFinished" important-w="73%" overflow-y="auto" ml="5%">
         <ul overflow-y="scroll" h="760px" text="left">
           <li
             v-for="data in materials" :key="data.path" cursor="pointer" inline-block w="50%" px="2%" py="%2" mb="10px"
