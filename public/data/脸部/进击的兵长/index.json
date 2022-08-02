@@ -1,0 +1,118 @@
+{
+  "categories": [
+    {
+      "cate2": "真人脸"
+    },
+    {
+      "cate2": "暴漫"
+    },
+    {
+      "cate2": "卡通脸"
+    },
+    {
+      "cate2": "进击的兵长"
+    }
+  ],
+  "materials": [
+    {
+      "width": 90,
+      "height": 112,
+      "path": "/images/脸部/进击的兵长/a1.png"
+    },
+    {
+      "width": 90,
+      "height": 113,
+      "path": "/images/脸部/进击的兵长/a2.png"
+    },
+    {
+      "width": 90,
+      "height": 84,
+      "path": "/images/脸部/进击的兵长/a3.png"
+    },
+    {
+      "width": 90,
+      "height": 72,
+      "path": "/images/脸部/进击的兵长/a4.png"
+    },
+    {
+      "width": 90,
+      "height": 101,
+      "path": "/images/脸部/进击的兵长/a5.png"
+    },
+    {
+      "width": 90,
+      "height": 109,
+      "path": "/images/脸部/进击的兵长/a6.png"
+    },
+    {
+      "width": 90,
+      "height": 94,
+      "path": "/images/脸部/进击的兵长/a7.png"
+    },
+    {
+      "width": 90,
+      "height": 115,
+      "path": "/images/脸部/进击的兵长/a8.png"
+    },
+    {
+      "width": 90,
+      "height": 101,
+      "path": "/images/脸部/进击的兵长/a9.png"
+    },
+    {
+      "width": 90,
+      "height": 126,
+      "path": "/images/脸部/进击的兵长/a10.png"
+    },
+    {
+      "width": 90,
+      "height": 97,
+      "path": "/images/脸部/进击的兵长/a11.png"
+    },
+    {
+      "width": 90,
+      "height": 103,
+      "path": "/images/脸部/进击的兵长/a12.png"
+    },
+    {
+      "width": 90,
+      "height": 138,
+      "path": "/images/脸部/进击的兵长/a13.png"
+    },
+    {
+      "width": 90,
+      "height": 99,
+      "path": "/images/脸部/进击的兵长/a14.png"
+    },
+    {
+      "width": 90,
+      "height": 113,
+      "path": "/images/脸部/进击的兵长/a15.png"
+    },
+    {
+      "width": 90,
+      "height": 77,
+      "path": "/images/脸部/进击的兵长/a16.png"
+    },
+    {
+      "width": 90,
+      "height": 104,
+      "path": "/images/脸部/进击的兵长/a17.png"
+    },
+    {
+      "width": 90,
+      "height": 99,
+      "path": "/images/脸部/进击的兵长/a18.png"
+    },
+    {
+      "width": 90,
+      "height": 102,
+      "path": "/images/脸部/进击的兵长/a19.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/脸部/进击的兵长/a20.png"
+    }
+  ]
+}

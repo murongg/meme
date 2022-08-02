@@ -1,0 +1,290 @@
+{
+  "categories": [
+    {
+      "cate2": "熊猫人"
+    },
+    {
+      "cate2": "蘑菇头"
+    },
+    {
+      "cate2": "猫脸"
+    },
+    {
+      "cate2": "罗罗布"
+    },
+    {
+      "cate2": "汪蛋"
+    },
+    {
+      "cate2": "双人互动"
+    },
+    {
+      "cate2": "刀剑枪药"
+    },
+    {
+      "cate2": "睡觉"
+    },
+    {
+      "cate2": "彼尔德"
+    },
+    {
+      "cate2": "BONBON"
+    },
+    {
+      "cate2": "世界杯"
+    },
+    {
+      "cate2": "你懂的"
+    },
+    {
+      "cate2": "傻逗"
+    },
+    {
+      "cate2": "兔子"
+    },
+    {
+      "cate2": "动漫"
+    },
+    {
+      "cate2": "包被子"
+    },
+    {
+      "cate2": "哭泣"
+    },
+    {
+      "cate2": "嗷大喵"
+    },
+    {
+      "cate2": "嚯哈"
+    },
+    {
+      "cate2": "圆脸"
+    },
+    {
+      "cate2": "坏坏"
+    },
+    {
+      "cate2": "小狮子"
+    },
+    {
+      "cate2": "恶搞兔"
+    },
+    {
+      "cate2": "手臂"
+    },
+    {
+      "cate2": "杂项"
+    },
+    {
+      "cate2": "猥琐萌"
+    },
+    {
+      "cate2": "给跪"
+    },
+    {
+      "cate2": "聚餐"
+    },
+    {
+      "cate2": "虎牙直播"
+    },
+    {
+      "cate2": "趴地小人"
+    },
+    {
+      "cate2": "趴着"
+    },
+    {
+      "cate2": "阿狮马"
+    },
+    {
+      "cate2": "黑暗势力"
+    }
+  ],
+  "materials": [
+    {
+      "width": 90,
+      "height": 123,
+      "path": "/images/身体/圆脸/a1.png"
+    },
+    {
+      "width": 90,
+      "height": 97,
+      "path": "/images/身体/圆脸/a2.png"
+    },
+    {
+      "width": 90,
+      "height": 101,
+      "path": "/images/身体/圆脸/a3.png"
+    },
+    {
+      "width": 90,
+      "height": 119,
+      "path": "/images/身体/圆脸/a4.png"
+    },
+    {
+      "width": 90,
+      "height": 108,
+      "path": "/images/身体/圆脸/a5.png"
+    },
+    {
+      "width": 90,
+      "height": 106,
+      "path": "/images/身体/圆脸/a6.png"
+    },
+    {
+      "width": 90,
+      "height": 102,
+      "path": "/images/身体/圆脸/a7.png"
+    },
+    {
+      "width": 90,
+      "height": 119,
+      "path": "/images/身体/圆脸/a8.png"
+    },
+    {
+      "width": 90,
+      "height": 110,
+      "path": "/images/身体/圆脸/a9.png"
+    },
+    {
+      "width": 90,
+      "height": 99,
+      "path": "/images/身体/圆脸/a10.png"
+    },
+    {
+      "width": 90,
+      "height": 117,
+      "path": "/images/身体/圆脸/a11.png"
+    },
+    {
+      "width": 90,
+      "height": 112,
+      "path": "/images/身体/圆脸/a12.png"
+    },
+    {
+      "width": 90,
+      "height": 110,
+      "path": "/images/身体/圆脸/a13.png"
+    },
+    {
+      "width": 90,
+      "height": 165,
+      "path": "/images/身体/圆脸/a14.png"
+    },
+    {
+      "width": 90,
+      "height": 103,
+      "path": "/images/身体/圆脸/a15.png"
+    },
+    {
+      "width": 90,
+      "height": 117,
+      "path": "/images/身体/圆脸/a16.png"
+    },
+    {
+      "width": 90,
+      "height": 100,
+      "path": "/images/身体/圆脸/a17.png"
+    },
+    {
+      "width": 90,
+      "height": 129,
+      "path": "/images/身体/圆脸/a18.png"
+    },
+    {
+      "width": 90,
+      "height": 101,
+      "path": "/images/身体/圆脸/a19.png"
+    },
+    {
+      "width": 90,
+      "height": 83,
+      "path": "/images/身体/圆脸/a20.png"
+    },
+    {
+      "width": 90,
+      "height": 104,
+      "path": "/images/身体/圆脸/a21.png"
+    },
+    {
+      "width": 90,
+      "height": 99,
+      "path": "/images/身体/圆脸/a22.png"
+    },
+    {
+      "width": 90,
+      "height": 70,
+      "path": "/images/身体/圆脸/a23.png"
+    },
+    {
+      "width": 90,
+      "height": 114,
+      "path": "/images/身体/圆脸/a24.png"
+    },
+    {
+      "width": 90,
+      "height": 81,
+      "path": "/images/身体/圆脸/a25.png"
+    },
+    {
+      "width": 90,
+      "height": 91,
+      "path": "/images/身体/圆脸/a26.png"
+    },
+    {
+      "width": 90,
+      "height": 88,
+      "path": "/images/身体/圆脸/a27.png"
+    },
+    {
+      "width": 90,
+      "height": 85,
+      "path": "/images/身体/圆脸/a28.png"
+    },
+    {
+      "width": 90,
+      "height": 111,
+      "path": "/images/身体/圆脸/a29.png"
+    },
+    {
+      "width": 90,
+      "height": 110,
+      "path": "/images/身体/圆脸/a30.png"
+    },
+    {
+      "width": 90,
+      "height": 66,
+      "path": "/images/身体/圆脸/a31.png"
+    },
+    {
+      "width": 90,
+      "height": 136,
+      "path": "/images/身体/圆脸/a32.png"
+    },
+    {
+      "width": 90,
+      "height": 91,
+      "path": "/images/身体/圆脸/a33.png"
+    },
+    {
+      "width": 90,
+      "height": 96,
+      "path": "/images/身体/圆脸/a34.png"
+    },
+    {
+      "width": 90,
+      "height": 180,
+      "path": "/images/身体/圆脸/a35.png"
+    },
+    {
+      "width": 90,
+      "height": 86,
+      "path": "/images/身体/圆脸/a36.png"
+    },
+    {
+      "width": 90,
+      "height": 113,
+      "path": "/images/身体/圆脸/a37.png"
+    }
+  ]
+}

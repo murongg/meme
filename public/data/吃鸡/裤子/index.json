@@ -1,0 +1,313 @@
+{
+  "categories": [
+    {
+      "cate2": "头盔"
+    },
+    {
+      "cate2": "突击步枪"
+    },
+    {
+      "cate2": "冲锋枪"
+    },
+    {
+      "cate2": "手雷"
+    },
+    {
+      "cate2": "近战武器"
+    },
+    {
+      "cate2": "T恤"
+    },
+    {
+      "cate2": "卡宾枪"
+    },
+    {
+      "cate2": "夹克"
+    },
+    {
+      "cate2": "子弹"
+    },
+    {
+      "cate2": "帽子"
+    },
+    {
+      "cate2": "手套"
+    },
+    {
+      "cate2": "手枪"
+    },
+    {
+      "cate2": "散弹枪"
+    },
+    {
+      "cate2": "消耗品"
+    },
+    {
+      "cate2": "狙击步枪"
+    },
+    {
+      "cate2": "眼镜"
+    },
+    {
+      "cate2": "精确步枪"
+    },
+    {
+      "cate2": "背包"
+    },
+    {
+      "cate2": "背心"
+    },
+    {
+      "cate2": "腰带"
+    },
+    {
+      "cate2": "裤子"
+    },
+    {
+      "cate2": "轻机枪"
+    },
+    {
+      "cate2": "配件弹夹"
+    },
+    {
+      "cate2": "配件弹药"
+    },
+    {
+      "cate2": "配件枪口"
+    },
+    {
+      "cate2": "配件镜头"
+    },
+    {
+      "cate2": "钥匙"
+    },
+    {
+      "cate2": "面具"
+    },
+    {
+      "cate2": "鞋子"
+    }
+  ],
+  "materials": [
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a1.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a2.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a3.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a4.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a5.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a6.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a7.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a8.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a9.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a10.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a11.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a12.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a13.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a14.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a15.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a16.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a17.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a18.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a19.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a20.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a21.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a22.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a23.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a24.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a25.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a26.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a27.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a28.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a29.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a30.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a31.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a32.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a33.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a34.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a35.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a36.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a37.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a38.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a39.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a40.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a41.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a42.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a43.png"
+    },
+    {
+      "width": 90,
+      "height": 90,
+      "path": "/images/吃鸡/裤子/a44.png"
+    }
+  ]
+}

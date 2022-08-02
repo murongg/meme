@@ -1,0 +1,170 @@
+{
+  "categories": [
+    {
+      "cate2": "杂物"
+    },
+    {
+      "cate2": "帽子"
+    },
+    {
+      "cate2": "武器"
+    },
+    {
+      "cate2": "发型"
+    },
+    {
+      "cate2": "花花"
+    },
+    {
+      "cate2": "冷兵器"
+    },
+    {
+      "cate2": "圣诞"
+    },
+    {
+      "cate2": "水果"
+    },
+    {
+      "cate2": "物品"
+    },
+    {
+      "cate2": "眼镜"
+    },
+    {
+      "cate2": "项链"
+    },
+    {
+      "cate2": "饮料"
+    },
+    {
+      "cate2": "香烟"
+    }
+  ],
+  "materials": [
+    {
+      "width": 90,
+      "height": 35,
+      "path": "/images/素材/杂物/a1.png"
+    },
+    {
+      "width": 90,
+      "height": 102,
+      "path": "/images/素材/杂物/a2.png"
+    },
+    {
+      "width": 90,
+      "height": 50,
+      "path": "/images/素材/杂物/a3.png"
+    },
+    {
+      "width": 90,
+      "height": 41,
+      "path": "/images/素材/杂物/a4.png"
+    },
+    {
+      "width": 90,
+      "height": 34,
+      "path": "/images/素材/杂物/a5.png"
+    },
+    {
+      "width": 90,
+      "height": 61,
+      "path": "/images/素材/杂物/a6.png"
+    },
+    {
+      "width": 90,
+      "height": 37,
+      "path": "/images/素材/杂物/a7.png"
+    },
+    {
+      "width": 90,
+      "height": 118,
+      "path": "/images/素材/杂物/a8.png"
+    },
+    {
+      "width": 90,
+      "height": 88,
+      "path": "/images/素材/杂物/a9.png"
+    },
+    {
+      "width": 90,
+      "height": 171,
+      "path": "/images/素材/杂物/a10.png"
+    },
+    {
+      "width": 90,
+      "height": 91,
+      "path": "/images/素材/杂物/a11.png"
+    },
+    {
+      "width": 90,
+      "height": 80,
+      "path": "/images/素材/杂物/a12.png"
+    },
+    {
+      "width": 90,
+      "height": 84,
+      "path": "/images/素材/杂物/a13.png"
+    },
+    {
+      "width": 90,
+      "height": 68,
+      "path": "/images/素材/杂物/a14.png"
+    },
+    {
+      "width": 90,
+      "height": 74,
+      "path": "/images/素材/杂物/a15.png"
+    },
+    {
+      "width": 90,
+      "height": 68,
+      "path": "/images/素材/杂物/a16.png"
+    },
+    {
+      "width": 90,
+      "height": 89,
+      "path": "/images/素材/杂物/a17.png"
+    },
+    {
+      "width": 90,
+      "height": 89,
+      "path": "/images/素材/杂物/a18.png"
+    },
+    {
+      "width": 90,
+      "height": 56,
+      "path": "/images/素材/杂物/a19.png"
+    },
+    {
+      "width": 90,
+      "height": 36,
+      "path": "/images/素材/杂物/a20.png"
+    },
+    {
+      "width": 90,
+      "height": 92,
+      "path": "/images/素材/杂物/a21.png"
+    },
+    {
+      "width": 90,
+      "height": 68,
+      "path": "/images/素材/杂物/a22.png"
+    },
+    {
+      "width": 90,
+      "height": 128,
+      "path": "/images/素材/杂物/a23.png"
+    },
+    {
+      "width": 90,
+      "height": 36,
+      "path": "/images/素材/杂物/a24.png"
+    },
+    {
+      "width": 90,
+      "height": 37,
+      "path": "/images/素材/杂物/a25.png"
+    }
+  ]
+}

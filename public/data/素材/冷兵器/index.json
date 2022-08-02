@@ -1,0 +1,265 @@
+{
+  "categories": [
+    {
+      "cate2": "杂物"
+    },
+    {
+      "cate2": "帽子"
+    },
+    {
+      "cate2": "武器"
+    },
+    {
+      "cate2": "发型"
+    },
+    {
+      "cate2": "花花"
+    },
+    {
+      "cate2": "冷兵器"
+    },
+    {
+      "cate2": "圣诞"
+    },
+    {
+      "cate2": "水果"
+    },
+    {
+      "cate2": "物品"
+    },
+    {
+      "cate2": "眼镜"
+    },
+    {
+      "cate2": "项链"
+    },
+    {
+      "cate2": "饮料"
+    },
+    {
+      "cate2": "香烟"
+    }
+  ],
+  "materials": [
+    {
+      "width": 90,
+      "height": 189,
+      "path": "/images/素材/冷兵器/a1.png"
+    },
+    {
+      "width": 90,
+      "height": 41,
+      "path": "/images/素材/冷兵器/a2.png"
+    },
+    {
+      "width": 90,
+      "height": 349,
+      "path": "/images/素材/冷兵器/a3.png"
+    },
+    {
+      "width": 90,
+      "height": 53,
+      "path": "/images/素材/冷兵器/a4.png"
+    },
+    {
+      "width": 90,
+      "height": 133,
+      "path": "/images/素材/冷兵器/a5.png"
+    },
+    {
+      "width": 90,
+      "height": 98,
+      "path": "/images/素材/冷兵器/a6.png"
+    },
+    {
+      "width": 90,
+      "height": 103,
+      "path": "/images/素材/冷兵器/a7.png"
+    },
+    {
+      "width": 90,
+      "height": 88,
+      "path": "/images/素材/冷兵器/a8.png"
+    },
+    {
+      "width": 90,
+      "height": 110,
+      "path": "/images/素材/冷兵器/a9.png"
+    },
+    {
+      "width": 90,
+      "height": 66,
+      "path": "/images/素材/冷兵器/a10.png"
+    },
+    {
+      "width": 90,
+      "height": 67,
+      "path": "/images/素材/冷兵器/a11.png"
+    },
+    {
+      "width": 90,
+      "height": 144,
+      "path": "/images/素材/冷兵器/a12.png"
+    },
+    {
+      "width": 90,
+      "height": 100,
+      "path": "/images/素材/冷兵器/a13.png"
+    },
+    {
+      "width": 90,
+      "height": 36,
+      "path": "/images/素材/冷兵器/a14.png"
+    },
+    {
+      "width": 90,
+      "height": 52,
+      "path": "/images/素材/冷兵器/a15.png"
+    },
+    {
+      "width": 90,
+      "height": 160,
+      "path": "/images/素材/冷兵器/a16.png"
+    },
+    {
+      "width": 90,
+      "height": 80,
+      "path": "/images/素材/冷兵器/a17.png"
+    },
+    {
+      "width": 90,
+      "height": 62,
+      "path": "/images/素材/冷兵器/a18.png"
+    },
+    {
+      "width": 90,
+      "height": 84,
+      "path": "/images/素材/冷兵器/a19.png"
+    },
+    {
+      "width": 90,
+      "height": 86,
+      "path": "/images/素材/冷兵器/a20.png"
+    },
+    {
+      "width": 90,
+      "height": 81,
+      "path": "/images/素材/冷兵器/a21.png"
+    },
+    {
+      "width": 90,
+      "height": 89,
+      "path": "/images/素材/冷兵器/a22.png"
+    },
+    {
+      "width": 90,
+      "height": 227,
+      "path": "/images/素材/冷兵器/a23.png"
+    },
+    {
+      "width": 90,
+      "height": 85,
+      "path": "/images/素材/冷兵器/a24.png"
+    },
+    {
+      "width": 90,
+      "height": 194,
+      "path": "/images/素材/冷兵器/a25.png"
+    },
+    {
+      "width": 90,
+      "height": 66,
+      "path": "/images/素材/冷兵器/a26.png"
+    },
+    {
+      "width": 90,
+      "height": 126,
+      "path": "/images/素材/冷兵器/a27.png"
+    },
+    {
+      "width": 90,
+      "height": 164,
+      "path": "/images/素材/冷兵器/a28.png"
+    },
+    {
+      "width": 90,
+      "height": 470,
+      "path": "/images/素材/冷兵器/a29.png"
+    },
+    {
+      "width": 90,
+      "height": 58,
+      "path": "/images/素材/冷兵器/a30.png"
+    },
+    {
+      "width": 90,
+      "height": 50,
+      "path": "/images/素材/冷兵器/a31.png"
+    },
+    {
+      "width": 90,
+      "height": 142,
+      "path": "/images/素材/冷兵器/a32.png"
+    },
+    {
+      "width": 90,
+      "height": 109,
+      "path": "/images/素材/冷兵器/a33.png"
+    },
+    {
+      "width": 90,
+      "height": 39,
+      "path": "/images/素材/冷兵器/a34.png"
+    },
+    {
+      "width": 90,
+      "height": 27,
+      "path": "/images/素材/冷兵器/a35.png"
+    },
+    {
+      "width": 90,
+      "height": 134,
+      "path": "/images/素材/冷兵器/a36.png"
+    },
+    {
+      "width": 90,
+      "height": 153,
+      "path": "/images/素材/冷兵器/a37.png"
+    },
+    {
+      "width": 90,
+      "height": 45,
+      "path": "/images/素材/冷兵器/a38.png"
+    },
+    {
+      "width": 90,
+      "height": 33,
+      "path": "/images/素材/冷兵器/a39.png"
+    },
+    {
+      "width": 90,
+      "height": 17,
+      "path": "/images/素材/冷兵器/a40.png"
+    },
+    {
+      "width": 90,
+      "height": 88,
+      "path": "/images/素材/冷兵器/a41.png"
+    },
+    {
+      "width": 90,
+      "height": 79,
+      "path": "/images/素材/冷兵器/a42.png"
+    },
+    {
+      "width": 90,
+      "height": 42,
+      "path": "/images/素材/冷兵器/a43.png"
+    },
+    {
+      "width": 90,
+      "height": 163,
+      "path": "/images/素材/冷兵器/a44.png"
+    }
+  ]
+}
