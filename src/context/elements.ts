@@ -20,7 +20,6 @@ export function initElements(canvas: fabric.Canvas) {
     hoverCursor: 'default',
   })
 
-
   const triangleWidth = 50
   const triangleHeight = 25
 
@@ -39,20 +38,18 @@ export function initElements(canvas: fabric.Canvas) {
     hoverCursor: 'nw-resize',
   })
 
-  triangle.on('moving', () => {
+  const moving = () => {
     let width = rect.width! + triangle.left! - oldTriangleLeft
     let height = rect.height! + triangle.top! - oldTriangleTop
-    if (width <= CANVAS_DRAW_CONTAINER_MIN_WIDTH) {
+    if (width <= CANVAS_DRAW_CONTAINER_MIN_WIDTH)
       width = CANVAS_DRAW_CONTAINER_MIN_WIDTH
-    } else if (width >= CANVAS_DRAW_CONTAINER_MAX_WIDTH) {
+    else if (width >= CANVAS_DRAW_CONTAINER_MAX_WIDTH)
       width = CANVAS_DRAW_CONTAINER_MAX_WIDTH
-    }
 
-    if (height <= CANVAS_DRAW_CONTAINER_MIN_HEIGHT) {
+    if (height <= CANVAS_DRAW_CONTAINER_MIN_HEIGHT)
       height = CANVAS_DRAW_CONTAINER_MIN_HEIGHT
-    } else if (height >= CANVAS_DRAW_CONTAINER_MAX_HEIGHT) {
+    else if (height >= CANVAS_DRAW_CONTAINER_MAX_HEIGHT)
       height = CANVAS_DRAW_CONTAINER_MAX_HEIGHT
-    }
 
     const left = bodyWidth / 2 - width / 2
     const top = bodyHeight / 2 - height / 2
@@ -66,7 +63,9 @@ export function initElements(canvas: fabric.Canvas) {
     triangle.top = newTriangleTop
     oldTriangleLeft = newTriangleLeft
     oldTriangleTop = newTriangleTop
-  });
+  }
+
+  triangle.on('moving', moving);
 
   (rect as any).set(CANVAS_KEY, CANVAS_DRAW_CONTAINER_KEY);
   (triangle as any).set(CANVAS_KEY, CANVAS_DRAW_DRAG_ELEMENT_KEY)
@@ -74,4 +73,11 @@ export function initElements(canvas: fabric.Canvas) {
   const canvasRaw = toRaw(canvas)
   canvasRaw?.add(rect)
   canvasRaw.add(triangle)
+  // triangle is forbidden to be selected.
+  canvasRaw?.on('mouse:down:before', () => {
+    triangle.selectable = true
+  })
+  canvasRaw?.on('mouse:up:before', () => {
+    triangle.selectable = false
+  })
 }

@@ -83,9 +83,14 @@ export function initEvents(canvas: fabric.Canvas, options: {
   canvas.on('mouse:down', canvasOnMouseDown)
   canvas.on('mouse:up', canvasOnMouseUp)
 
+  // canvas.on('')
+
   document.onkeydown = function (e) {
     if (e.key === 'Backspace') {
-      canvas.getActiveObjects().forEach((obj) => { canvas.remove(obj) })
+      canvas.getActiveObjects().forEach((obj) => {
+        if (!hasPrivateElement(obj))
+          canvas.remove(obj)
+      })
       topMenu.visable = false
     }
   }
