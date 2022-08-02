@@ -104,12 +104,12 @@
     {
       "width": 90,
       "height": 62,
-      "path": "http://www.wakatool.com/material/v12/身体/聚餐/a1.png"
+      "path": "/images/身体/聚餐/a1.png"
     },
     {
       "width": 90,
       "height": 65,
-      "path": "http://www.wakatool.com/material/v12/身体/聚餐/a2.png"
+      "path": "/images/身体/聚餐/a2.png"
     }
   ]
 }

@@ -44,57 +44,57 @@
     {
       "width": 90,
       "height": 23,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a1.png"
+      "path": "/images/素材/武器/a1.png"
     },
     {
       "width": 90,
       "height": 120,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a2.png"
+      "path": "/images/素材/武器/a2.png"
     },
     {
       "width": 90,
       "height": 38,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a3.png"
+      "path": "/images/素材/武器/a3.png"
     },
     {
       "width": 90,
       "height": 66,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a4.png"
+      "path": "/images/素材/武器/a4.png"
     },
     {
       "width": 90,
       "height": 140,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a5.png"
+      "path": "/images/素材/武器/a5.png"
     },
     {
       "width": 90,
       "height": 90,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a6.png"
+      "path": "/images/素材/武器/a6.png"
     },
     {
       "width": 90,
       "height": 60,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a7.png"
+      "path": "/images/素材/武器/a7.png"
     },
     {
       "width": 90,
       "height": 68,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a8.png"
+      "path": "/images/素材/武器/a8.png"
     },
     {
       "width": 90,
       "height": 36,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a9.png"
+      "path": "/images/素材/武器/a9.png"
     },
     {
       "width": 90,
       "height": 53,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a10.png"
+      "path": "/images/素材/武器/a10.png"
     },
     {
       "width": 90,
       "height": 72,
-      "path": "http://www.wakatool.com/material/v12/素材/武器/a11.png"
+      "path": "/images/素材/武器/a11.png"
     }
   ]
 }

@@ -104,17 +104,17 @@
     {
       "width": 90,
       "height": 96,
-      "path": "http://www.wakatool.com/material/v12/身体/嗷大喵/a1.png"
+      "path": "/images/身体/嗷大喵/a1.png"
     },
     {
       "width": 90,
       "height": 75,
-      "path": "http://www.wakatool.com/material/v12/身体/嗷大喵/a2.png"
+      "path": "/images/身体/嗷大喵/a2.png"
     },
     {
       "width": 90,
       "height": 83,
-      "path": "http://www.wakatool.com/material/v12/身体/嗷大喵/a3.png"
+      "path": "/images/身体/嗷大喵/a3.png"
     }
   ]
 }

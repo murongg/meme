@@ -92,17 +92,17 @@
     {
       "width": 90,
       "height": 131,
-      "path": "http://www.wakatool.com/material/v12/吃鸡/背心/a1.png"
+      "path": "/images/吃鸡/背心/a1.png"
     },
     {
       "width": 90,
       "height": 128,
-      "path": "http://www.wakatool.com/material/v12/吃鸡/背心/a2.png"
+      "path": "/images/吃鸡/背心/a2.png"
     },
     {
       "width": 90,
       "height": 126,
-      "path": "http://www.wakatool.com/material/v12/吃鸡/背心/a3.png"
+      "path": "/images/吃鸡/背心/a3.png"
     }
   ]
 }
