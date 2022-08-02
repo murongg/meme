@@ -54,10 +54,18 @@ function onDrag(event: DragEvent, data: any) {
   let imgElement = document.createElement('img')
   imgElement.src = data.path
   imgElement.onload = () => {
-    const image = new fabric.Image(imgElement, {
-      left: rightPanel.x,
-      top: rightPanel.y,
-    })
+    const image = new fabric.Image(imgElement)
+    const imageSize = 200
+    const left = rightPanel.x - imageSize / 2
+    const top = rightPanel.y - imageSize / 2
+    image.scale(imageSize / image.width!).set(
+      {
+        angle: 0,
+        padding: 10,
+        left,
+        top
+      }
+    )
     toRaw(canvas.value)?.add(image)
   }
 }
@@ -85,8 +93,8 @@ function onDrag(event: DragEvent, data: any) {
       </div>
       <div important-w="70%" overflow-y="auto" v-if="isFinished">
         <ul overflow-y="scroll" h="760px" text="left">
-          <li v-for="data in materials" :key="data.path" inline-block w="50%" px="2%" py="%2" mb="10px" box-border
-            v="middle">
+          <li v-for="data in materials" :key="data.path" cursor="pointer" inline-block w="50%" px="2%" py="%2" mb="10px"
+            box-border v="middle">
             <img v-lazy="data.path" draggable @dragend="onDrag($event, data)">
           </li>
         </ul>

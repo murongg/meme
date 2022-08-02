@@ -5,12 +5,10 @@ const rightPanel = useRightPanel()
 const el = ref<HTMLElement | null>(null)
 
 function onDrop(e: DragEvent) {
-  console.log(e.x, e.y, e)
   const { x, y } = e
   rightPanel.x = x
   rightPanel.y = y
 }
-
 
 </script>
 
