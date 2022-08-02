@@ -1,5 +1,5 @@
 import { fabric } from 'fabric'
-import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_DRAW_DRAG_ELEMENT_KEY, CANVAS_KEY } from '~/constants/elements'
+import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_DRAW_CONTAINER_MAX_HEIGHT, CANVAS_DRAW_CONTAINER_MAX_WIDTH, CANVAS_DRAW_CONTAINER_MIN_HEIGHT, CANVAS_DRAW_CONTAINER_MIN_WIDTH, CANVAS_DRAW_DRAG_ELEMENT_KEY, CANVAS_KEY } from '~/constants/elements'
 export function initElements(canvas: fabric.Canvas) {
   const body = document.body
   const rightPanelWidth = 400
@@ -20,6 +20,10 @@ export function initElements(canvas: fabric.Canvas) {
     hoverCursor: 'default',
   })
 
+
+  const triangleWidth = 50
+  const triangleHeight = 25
+
   let oldTriangleLeft = rect.left! + rectWidth + 19
   let oldTriangleTop = rect.top! + rectHeight - 17
   const triangle = new fabric.Triangle({
@@ -28,16 +32,28 @@ export function initElements(canvas: fabric.Canvas) {
     selectable: true,
     top: oldTriangleTop,
     left: oldTriangleLeft,
-    width: 50,
-    height: 25,
+    width: triangleWidth,
+    height: triangleHeight,
     fill: '#bbb',
     angle: 135,
     hoverCursor: 'nw-resize',
   })
 
   triangle.on('moving', () => {
-    const width = rect.width! + triangle.left! - oldTriangleLeft
-    const height = rect.height! + triangle.top! - oldTriangleTop
+    let width = rect.width! + triangle.left! - oldTriangleLeft
+    let height = rect.height! + triangle.top! - oldTriangleTop
+    if (width <= CANVAS_DRAW_CONTAINER_MIN_WIDTH) {
+      width = CANVAS_DRAW_CONTAINER_MIN_WIDTH
+    } else if (width >= CANVAS_DRAW_CONTAINER_MAX_WIDTH) {
+      width = CANVAS_DRAW_CONTAINER_MAX_WIDTH
+    }
+
+    if (height <= CANVAS_DRAW_CONTAINER_MIN_HEIGHT) {
+      height = CANVAS_DRAW_CONTAINER_MIN_HEIGHT
+    } else if (height >= CANVAS_DRAW_CONTAINER_MAX_HEIGHT) {
+      height = CANVAS_DRAW_CONTAINER_MAX_HEIGHT
+    }
+
     const left = bodyWidth / 2 - width / 2
     const top = bodyHeight / 2 - height / 2
     rect.width = width
