@@ -19,6 +19,7 @@ function onDrop(e: DragEvent) {
       <Board />
       <RightMenu />
       <RightPanel />
+      <Modal />
     </div>
   </main>
 </template>

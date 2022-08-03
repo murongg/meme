@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     Board: typeof import('./src/components/Board.vue')['default']
     LeftToolsBar: typeof import('./src/components/LeftToolsBar.vue')['default']
     MemeSelector: typeof import('./src/components/MemeSelector.vue')['default']
+    Modal: typeof import('./src/components/Modal.vue')['default']
     RightMenu: typeof import('./src/components/RightMenu.vue')['default']
     RightPanel: typeof import('./src/components/RightPanel.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -1,7 +1,7 @@
 import { hasPrivateElement } from './utils'
 import { useBoard } from '~/context/board'
 import { useTopMenu } from '~/store/topMenu'
-import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_KEY } from '~/constants/elements'
+import { useModal } from '~/store/modal'
 
 const { canvas, isCreateText, undo, redo } = useBoard()
 
@@ -67,30 +67,11 @@ export const LEFT_TOOLS = [{
   icon: 'i-bxs-download',
   event: () => {
     const canvasRaw = toRaw(canvas.value)
-    const currentObjects = canvasRaw?.getObjects()
-    let drawContainerObject: fabric.Rect | undefined
-    currentObjects?.forEach((obj: any) => {
-      if (obj.get(CANVAS_KEY) === CANVAS_DRAW_CONTAINER_KEY)
-        drawContainerObject = obj
-    })
-    const { left, top, width, height } = (drawContainerObject as any)
-
-    canvasRaw?.clone((e: fabric.Canvas) => {
-      console.log(e.getObjects())
-      e.getObjects().forEach((obj, index) => {
-        if (index < 2)
-          e.remove(obj)
-      })
-      console.log(e.getObjects())
-      const result = e?.toDataURL({
-        left,
-        top,
-        width,
-        height,
-      })
-      console.log(result)
-    })
-
-    commonHandler()
+    if (canvasRaw?.getObjects().length || 0 <= 2) {
+      window.alert('先在画布画点东西吧！')
+      return
+    }
+    const modal = useModal()
+    modal.visable = true
   },
 }]

@@ -14,6 +14,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.3
   '@vue/test-utils': ^2.0.0
   '@vueuse/core': ^8.6.0
+  animate.css: ^4.1.1
   axios: ^0.27.2
   download: ^8.0.0
   eslint: ^8.16.0
@@ -60,6 +61,7 @@ devDependencies:
   '@unocss/reset': 0.37.2
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
   '@vue/test-utils': 2.0.0_vue@3.2.36
+  animate.css: 4.1.1
   axios: 0.27.2
   download: 8.0.0
   eslint: 8.16.0
@@ -959,6 +961,10 @@ packages:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
+    dev: true
+
+  /animate.css/4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
     dev: true
 
   /ansi-regex/5.0.1:

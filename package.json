@@ -35,6 +35,7 @@
     "@unocss/reset": "^0.37.2",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/test-utils": "^2.0.0",
+    "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "download": "^8.0.0",
     "eslint": "^8.16.0",
