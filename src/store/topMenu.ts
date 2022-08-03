@@ -18,6 +18,8 @@ export const useTopMenu = defineStore('top-menu', {
     menuRef: null,
     visable: false,
     position: {},
+    upperDisabled: false,
+    lowerDisabled: false,
   }),
   actions: {
     showMenu() {

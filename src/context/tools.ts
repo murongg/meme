@@ -73,7 +73,7 @@ export const LEFT_TOOLS = [{
       if (obj.get(CANVAS_KEY) === CANVAS_DRAW_CONTAINER_KEY)
         drawContainerObject = obj
     })
-    const { left, top, width, height } = drawContainerObject
+    const { left, top, width, height } = (drawContainerObject as any)
 
     canvasRaw?.clone((e: fabric.Canvas) => {
       console.log(e.getObjects())
@@ -91,28 +91,6 @@ export const LEFT_TOOLS = [{
       console.log(result)
     })
 
-    commonHandler()
-  },
-}]
-
-export const TOP_MENU = [{
-  type: 'up',
-  icon: 'i-material-symbols-arrow-upward',
-  event: () => {
-    canvas.value?.bringForward(canvas.value.getActiveObject())
-  },
-}, {
-  type: 'down',
-  icon: 'i-material-symbols-arrow-downward',
-  event: () => {
-    canvas.value?.sendBackwards(canvas.value.getActiveObject())
-  },
-}, {
-  type: 'delete',
-  icon: 'i-material-symbols-delete-outline',
-  event: () => {
-    const canvasRaw = toRaw(canvas.value)
-    canvasRaw?.remove(canvasRaw.getActiveObject())
     commonHandler()
   },
 }]

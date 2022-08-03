@@ -1,6 +1,7 @@
 import type { Ref } from 'vue'
 import { fabric } from 'fabric'
 import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_DRAW_DRAG_ELEMENT_KEY, CANVAS_KEY } from '~/constants/elements'
+import { useTopMenu } from '~/store/topMenu'
 
 export function zoomToFitCanvas(canvas: Ref<fabric.Canvas | null>) {
   canvas.value?.setZoom(1)
@@ -42,4 +43,19 @@ export function zoomToFitCanvas(canvas: Ref<fabric.Canvas | null>) {
 export function hasPrivateElement(obj: any) {
   const key = obj.get(CANVAS_KEY)
   return key === CANVAS_DRAW_CONTAINER_KEY || key === CANVAS_DRAW_DRAG_ELEMENT_KEY
+}
+
+export function changeTopMenuState(canvas: fabric.Canvas) {
+  const topMenu = useTopMenu()
+  let index = 0
+  const currentActiveObject = canvas?.getActiveObject()
+  const publichObjects = canvas?.getObjects()
+    .filter(item => !hasPrivateElement(item))
+  publichObjects
+    .forEach((item, i) => {
+      if (item === currentActiveObject)
+        index = i
+    })
+  topMenu.upperDisabled = index === publichObjects.length - 1
+  topMenu.lowerDisabled = index === 0
 }

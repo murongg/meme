@@ -9,7 +9,7 @@ const IMAGE_PATH = join(__dirname, '..', 'public', 'images')
 async function downloadImage(url: string, path: string) {
   const fileName = url.split('/').pop() || ''
   if (isFile(join(path, fileName))) {
-    console.log(join(path, fileName) + '   exists')
+    console.log(`${join(path, fileName)}   exists`)
     return
   }
   console.log(`${url}  downloading...`)
@@ -20,12 +20,13 @@ async function downloadImage(url: string, path: string) {
 async function readDirDeep(path: string) {
   if (isDirectory(path)) {
     const dirs = readdirSync(path)
-    for (let dir of dirs) {
+    for (const dir of dirs)
       readDirDeep(join(path, dir))
-    }
-  } else if (isFile(path)) {
+  }
+  else if (isFile(path)) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const json = require(path)
-    for await (let meme of json.materials) {
+    for await (const meme of json.materials) {
       const memePath = meme.path
       let dirs = (meme.path as string).replace(BASE_URL, '').split('/')
       dirs.pop()
@@ -53,6 +54,5 @@ function writeFile(path: string, content: string) {
   writeFileSync(path, content)
   console.log(`write ${path} done`)
 }
-
 
 readDirDeep(BASE_PATH)
