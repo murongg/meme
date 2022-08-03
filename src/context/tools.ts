@@ -67,7 +67,7 @@ export const LEFT_TOOLS = [{
   icon: 'i-bxs-download',
   event: () => {
     const canvasRaw = toRaw(canvas.value)
-    if (canvasRaw?.getObjects().length || 0 <= 2) {
+    if ((canvasRaw?.getObjects().length || 0) <= 2) {
       window.alert('先在画布画点东西吧！')
       return
     }
