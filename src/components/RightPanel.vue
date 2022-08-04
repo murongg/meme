@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const show = ref(false)
+const show = ref(true)
 </script>
 
 <template>
@@ -12,6 +12,6 @@ const show = ref(false)
   </Transition>
   <button
     :class="show ? 'i-material-symbols-arrow-circle-right-outline' : 'i-material-symbols-arrow-circle-left-outline'"
-    icon-btn absolute @click="show = !show" transition duration-200 ease-in-out :right="show ? `420px` : `20px`"
-    top="50%" mt="-1.5rem" rounded-full text-4xl text-white></button>
+    icon-btn absolute @click="show = !show" transition duration-2000 ease-in-out :right="show ? `420px` : `20px`"
+    top="50%" mt="-1.5rem" rounded-full text-4xl></button>
 </template>
