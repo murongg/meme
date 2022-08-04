@@ -16,5 +16,9 @@
   <img src="./screenshot.png"/>
 </p>
 
+## 灵感
+
+- [哇咔工具](https://www.wakatool.com/maker)
+
 ## [在线使用](https://meme.mrong.me/)
 
