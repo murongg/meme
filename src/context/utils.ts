@@ -59,3 +59,17 @@ export function changeTopMenuState(canvas: fabric.Canvas) {
   topMenu.upperDisabled = index === publichObjects.length - 1
   topMenu.lowerDisabled = index === 0
 }
+
+export function getPlatform() {
+  const userAgent = navigator.userAgent
+  const OK = -1
+  if (userAgent.indexOf('Win') !== OK) {
+    return 'Windows'
+  } else if (userAgent.indexOf("Mac") !== OK) {
+    return 'Macintosh'
+  } else if (userAgent.indexOf("Linux") !== OK) {
+    return 'Linux'
+  } else {
+    return 'Windows'
+  }
+}
