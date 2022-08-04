@@ -43,6 +43,7 @@ export function initEvents(canvas: fabric.Canvas, options: {
         })
         canvas?.add(text)
         canvas?.setActiveObject(text)
+        text.enterEditing()
         options.isCreateText.value = false
         canvas!.defaultCursor = ''
       }
