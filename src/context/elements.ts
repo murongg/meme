@@ -1,14 +1,7 @@
 import { fabric } from 'fabric'
 import { CANVAS_DRAW_CONTAINER_KEY, CANVAS_DRAW_CONTAINER_MAX_HEIGHT, CANVAS_DRAW_CONTAINER_MAX_WIDTH, CANVAS_DRAW_CONTAINER_MIN_HEIGHT, CANVAS_DRAW_CONTAINER_MIN_WIDTH, CANVAS_DRAW_DRAG_ELEMENT_KEY, CANVAS_KEY } from '~/constants/elements'
 export function initElements(canvas: fabric.Canvas) {
-  const body = document.body
-  const rightPanelWidth = 400
-  const bodyWidth = body.clientWidth - rightPanelWidth
-  const bodyHeight = body.clientHeight
-  const rectWidth = 400
-  const rectHeight = 400
-  const left = bodyWidth / 2 - rectWidth / 2
-  const top = bodyHeight / 2 - rectHeight / 2
+  const { bodyHeight, bodyWidth, rectWidth, rectHeight, left, top } = computedRect()
   const rect = new fabric.Rect({
     top,
     left,
@@ -80,4 +73,28 @@ export function initElements(canvas: fabric.Canvas) {
   canvasRaw?.on('mouse:up:before', () => {
     triangle.selectable = false
   })
+
+  return {
+    rect,
+    triangle
+  }
+}
+
+export function computedRect(isCollapse: boolean = true) {
+  const body = document.body
+  const rightPanelWidth = isCollapse ? 0 : 400
+  const bodyWidth = body.clientWidth - rightPanelWidth
+  const bodyHeight = body.clientHeight
+  const rectWidth = 400
+  const rectHeight = 400
+  const left = bodyWidth / 2 - rectWidth / 2
+  const top = bodyHeight / 2 - rectHeight / 2
+  return {
+    bodyWidth,
+    bodyHeight,
+    rectWidth,
+    rectHeight,
+    left,
+    top
+  }
 }

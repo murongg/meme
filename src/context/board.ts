@@ -8,7 +8,8 @@ const canvas: Ref<fabric.Canvas | null> = ref(null)
 const isCreateText: Ref<boolean> = ref(false)
 const redo = ref(() => { })
 const undo = ref(() => { })
-
+const rect = ref<fabric.Rect | undefined>()
+const triangle = ref<fabric.Triangle | undefined>()
 export const useBoard = () => {
   function init(canvasElement: HTMLCanvasElement) {
     canvas.value = new fabric.Canvas(canvasElement!, {
@@ -28,7 +29,9 @@ export const useBoard = () => {
     }, 200))
 
     const canvasRaw = toRaw(canvas.value)
-    initElements(canvasRaw)
+    const { rect: r, triangle: t } = initElements(canvasRaw)
+    rect.value = r
+    triangle.value = t
     initEvents(canvasRaw, { isCreateText })
     const { init: initEditsEvent, undo: editUndo, redo: editRedo } = initEdits(canvasRaw)
     initEditsEvent()
@@ -39,6 +42,8 @@ export const useBoard = () => {
 
   return {
     canvas,
+    rect,
+    triangle,
     init,
     isCreateText,
     undo,
