@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
-import { useBoard } from '~/context/board.js';
-import { hasPrivateElement } from '~/context/utils.js';
-import { useModal } from '~/store/modal.js';
-import { useTopMenu } from '~/store/topMenu.js';
+import { useBoard } from '~/context/board.js'
+import { hasPrivateElement } from '~/context/utils.js'
+import { useModal } from '~/store/modal.js'
+import { useTopMenu } from '~/store/topMenu.js'
 
 const el: Ref<HTMLElement | null> = ref(null)
 const { style } = useDraggable(el, {
@@ -67,12 +67,13 @@ function download() {
   const modal = useModal()
   modal.visable = true
 }
-
 </script>
 
 <template>
-  <div ref="el" absolute display="flex" py="20px" flex="col" items="center" w="70px" z="100" cursor="move"
-    :style="style" class="card-container">
+  <div
+    ref="el" absolute display="flex" py="20px" flex="col" items="center" w="70px" z="100" cursor="move"
+    :style="style" class="card-container"
+  >
     <div card-icon w="50px" h="50px" mb="20px" @click.stop="pointer">
       <i icon-btn i-bxs-pointer text="8" />
     </div>

@@ -63,13 +63,12 @@ export function changeTopMenuState(canvas: fabric.Canvas) {
 export function getPlatform() {
   const userAgent = navigator.userAgent
   const OK = -1
-  if (userAgent.indexOf('Win') !== OK) {
+  if (userAgent.indexOf('Win') !== OK)
     return 'Windows'
-  } else if (userAgent.indexOf("Mac") !== OK) {
+  else if (userAgent.indexOf('Mac') !== OK)
     return 'Macintosh'
-  } else if (userAgent.indexOf("Linux") !== OK) {
+  else if (userAgent.indexOf('Linux') !== OK)
     return 'Linux'
-  } else {
+  else
     return 'Windows'
-  }
 }
